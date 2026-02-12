@@ -1,0 +1,10 @@
+flask
+flask-sqlalchemy
+flask-cors
+flask-mail
+pyjwt
+werkzeug
+razorpay
+psycopg2-binary
+gunicorn
+python-dotenv
