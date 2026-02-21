@@ -43,6 +43,9 @@ mail = Mail(app)
 db = SQLAlchemy(app)
 CORS(app)
 
+with app.app_context():
+    db.create_all()
+
 # Ensure upload directory exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 os.makedirs(os.path.join(app.config['UPLOAD_FOLDER'], 'tenant_docs'), exist_ok=True)
